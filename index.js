@@ -74,7 +74,7 @@ function checkAnswer(currentIndex) {
             }, 1000);
         }
     } else {
-        var wrongSound = new Audio("./wrong.mp3);
+        var wrongSound = new Audio("./wrong.mp3");
         wrongSound.play();
 
         $(".full-page").addClass("game-over");
