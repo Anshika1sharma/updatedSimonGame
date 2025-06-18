@@ -34,7 +34,7 @@ function chosenColor() {
         $tile.fadeTo(200, 1);
     }, 100);
 
-    var sound = new Audio("./sounds/" + choosedColor + ".mp3");
+    var sound = new Audio("./" + choosedColor + ".mp3");
     sound.play();
 
     return choosedColor;
@@ -59,7 +59,7 @@ $(".point").click(function () {
     var userChosenColor = $(this).attr("id");
     choosedPattern.push(userChosenColor);
 
-    var sound = new Audio("./sounds/" + userChosenColor + ".mp3");
+    var sound = new Audio("./" + userChosenColor + ".mp3");
     sound.play();
 
     checkAnswer(choosedPattern.length - 1);
@@ -74,7 +74,7 @@ function checkAnswer(currentIndex) {
             }, 1000);
         }
     } else {
-        var wrongSound = new Audio("./sounds/wrong.mp3");
+        var wrongSound = new Audio("./wrong.mp3");
         wrongSound.play();
 
         $(".full-page").addClass("game-over");
